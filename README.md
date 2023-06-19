@@ -24,9 +24,12 @@ Run the 'globalNetworkAnaysis.R' script in github_src directory with the followi
 
 #### _Community-level analysis_ 
 Run the 'communityLevelAnalysis.R'
+```
+Rscript ./github_src/communityLevelAnalysis.R ./github_src/createIgraphObject.R ./github_src/getKoBySpecies.R ../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ../sampledata/cooccurNetwork/cd1.cooccur.network.csv ../sampledata/cooccurNetwork/cd2.cooccur.network.csv ../sampledata/cooccurNetwork/uc1.cooccur.network.csv ../sampledata/cooccurNetwork/uc2.cooccur.network.csv ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
+```
 #### _Key element-level analysis_ 
 Run the 'keyElementLevelAnalysis.R'
 ```
-Rscript ./github_src/keyElementLevelAnalysis.R output/ctrl1.cooccur.network.csv output/ctrl2.cooccur.network.csv output/cd1.cooccur.network.csv output/cd2.cooccur.network.csv output/uc1.cooccur.network.csv output/uc2.cooccur.network.csv output/s1_preprocess/IBD1_KOdata.csv output/s1_preprocess/IBD2_KOdata.csv
+Rscript ./github_src/keyElementLevelAnalysis.R ../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ../sampledata/cooccurNetwork/cd1.cooccur.network.csv ../sampledata/cooccurNetwork/cd2.cooccur.network.csv ../sampledata/cooccurNetwork/uc1.cooccur.network.csv ../sampledata/cooccurNetwork/uc2.cooccur.network.csv ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
 ### Comparative analysis
