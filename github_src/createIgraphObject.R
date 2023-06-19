@@ -38,7 +38,7 @@ creating_igraph_Graphs<- function(cooccur_mat, tx1, tx2, edge_col){
   tx_level_tbl<- data.frame(cooccur_mat[,c(tx1, tx2, edge_col)])
   colnames(tx_level_tbl)[3]<- "weight"
   gp_taxon<- graph_from_data_frame(tx_level_tbl, directed=FALSE, vertices=NULL)
-  #gp_taxon<- graph_from_data_frame(tx_level_tbl)
+  
   return(gp_taxon)
 }
 
@@ -46,6 +46,6 @@ creatingUNWEIGHTED_igraph_Graphs<- function(cooccur_mat, tx1, tx2){
   tx_level_tbl<- data.frame(cooccur_mat[,c(tx1, tx2)])
   #colnames(tx_level_tbl)[3]<- "weight"
   gp_taxon<- graph_from_data_frame(tx_level_tbl, directed=FALSE, vertices=NULL)
-  #gp_taxon<- graph_from_data_frame(tx_level_tbl)
+  
   return(gp_taxon)
 }
