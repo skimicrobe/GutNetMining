@@ -7,7 +7,7 @@
 # Last updated: Feb-20-2023                                                    #
 # Goal: read co-occurrence network in igraph object                            #
 ################################################################################
-
+library(stringr)
 library(igraph)
 
 # This function will split taxonomy information and create new columns for each
