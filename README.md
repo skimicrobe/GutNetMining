@@ -19,25 +19,26 @@ Software R
 
 ### Network analysis 
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
+```
 ./NETWORK_ANALYSIS.R SRC_DIR CONTROL_NETW_1 CONTROL_NETW_2 CD_NETW_1 CD_NETW_2 UC_NETW_1 UC_NETW_2 KO_1 KO_2
+```
+* NETWORK_ANALYSIS.R: Perform the following scripts( glboalNetworkAnalysis.R, communityLevelAnalysis.R, keyElementLEvelAnalysis.R )
 
-NETWORK_ANALYSIS.R: Perform the following scripts( glboalNetworkAnalysis.R, communityLevelAnalysis.R, keyElementLEvelAnalysis.R )
-
-SRC_DIR: directory containing other necessary scripts for performing these scripts.
+* SRC_DIR: directory containing other necessary scripts for performing these scripts.
  
-CONTROL_NETW_1: file with the species co-occurrence network at the level of significance less than 0.05 in Control (dataset 1)
+* CONTROL_NETW_1: file with the species co-occurrence network at the level of significance less than 0.05 in Control (dataset 1)
 
-CONTROL_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in Control (dataset 2)
+* CONTROL_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in Control (dataset 2)
 
-CD_NETW_1: file with the species co-occurrence network at the level of significance less than 0.05 in CD (dataset 1)
+* CD_NETW_1: file with the species co-occurrence network at the level of significance less than 0.05 in CD (dataset 1)
 
-CD_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in CD (dataset 2)
+* CD_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in CD (dataset 2)
 
-UC_NETW_1: file with the species co-occurrence network at the level of significance less than 0.05 in UC (dataset 1)
+* UC_NETW_1: file with the species co-occurrence network at the level of significance less than 0.05 in UC (dataset 1)
 
-UC_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in UC (dataset 2)
+* UC_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in UC (dataset 2)
 
-KO_1: file with the long format KEGG Orthologue containing KO-IDs, Genus, Species, Sample-IDs, GroupName (Control, CD, and UC)
+* KO_1: file with the long format KEGG Orthologue containing KO-IDs, Genus, Species, Sample-IDs, GroupName (Control, CD, and UC)
 
 A sample run using the example data. The level of significance level for the species co-occurrence network can be changed by the users.
 
