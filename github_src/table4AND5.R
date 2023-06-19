@@ -1,7 +1,7 @@
 #!/usr/bin/r
 
 ################################################################################
-# tabe4AND5.R                                                                  #
+# table4AND5.R                                                                 #
 # Name: Suyeon Kim                                                             #
 # Date: May-31-2023                                                            #
 # Last updated: June-19-2023                                                   #
