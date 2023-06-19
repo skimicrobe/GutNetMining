@@ -22,7 +22,7 @@ Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following p
 ```
 ./NETWORK_ANALYSIS.R SRC_DIR CONTROL_NETW_1 CONTROL_NETW_2 CD_NETW_1 CD_NETW_2 UC_NETW_1 UC_NETW_2 KO_1 KO_2
 ```
-* NETWORK_ANALYSIS.R: Perform the following scripts( _glboalNetworkAnalysis.R_, _communityLevelAnalysis.R_, and _keyElementLEvelAnalysis.R_ )
+* NETWORK_ANALYSIS.R: Perform the following scripts( _glboalNetworkAnalysis.R_, _communityLevelAnalysis.R_, and _keyElementLevelAnalysis.R_ )
 
 * SRC_DIR: directory containing other necessary scripts for performing these scripts.
  
