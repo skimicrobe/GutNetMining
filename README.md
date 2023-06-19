@@ -38,7 +38,9 @@ Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following p
 
 * UC_NETW_2: file with the species co-occurrence network at the level of significance less than 0.05 in UC (dataset 2)
 
-* KO_1: file with the long format KEGG Orthologue containing KO-IDs, Genus, Species, Sample-IDs, GroupName (Control, CD, and UC)
+* KO_1: file with the long format KEGG Orthologue containing KO-IDs, Genus, Species, Sample-IDs, GroupName (control, cd, and uc) from dataset 1
+
+* KO_2: file with the long format KEGG Orthologue containing KO-IDs, Genus, Species, Sample-IDs, GroupName (control, cd, and uc) from dataset 2
 
 A sample run using the example data. The level of significance level for the species co-occurrence network can be changed by the users.
 
