@@ -58,3 +58,6 @@ Run the 'keyElementLevelAnalysis.R'
 Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ../sampledata/cooccurNetwork/cd1.cooccur.network.csv ../sampledata/cooccurNetwork/cd2.cooccur.network.csv ../sampledata/cooccurNetwork/uc1.cooccur.network.csv ../sampledata/cooccurNetwork/uc2.cooccur.network.csv ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
 ### Comparative analysis
+```
+Rscript ./github_src/table4AND5.R ./github_src/ ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
+```
