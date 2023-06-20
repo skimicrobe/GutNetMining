@@ -15,7 +15,7 @@ Software R
 ----------------------------------------------------------------------
 ## Workflows
 ### Main workflow
-![overviewPipeline.png](overviewPipeline_IP_OP.png)
+![Overviewpipeline.png](Overviewpipeline.png Overview)
 
 ### Network analysis 
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
