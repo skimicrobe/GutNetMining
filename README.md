@@ -15,7 +15,7 @@ Software R
 ----------------------------------------------------------------------
 ## Workflows
 ### Main workflow
-![Overviewpipeline.png](Overviewpipeline.png Overview)
+![Overview](https://github.com/skimicrobe/GutNetMining/blob/main/Overviewpipeline.png)
 
 ### Network analysis 
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
