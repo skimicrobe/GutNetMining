@@ -51,17 +51,17 @@ A sample run using the example data. The level of significance level for the spe
 #### _Global Network analysis_
 
 ```
-Rscript ./github_src/globalNetworkAnaysis.R ./github_src/ ../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ../sampledata/cooccurNetwork/cd1.cooccur.network.csv ../sampledata/cooccurNetwork/cd2.cooccur.network.csv ../sampledata/cooccurNetwork/uc1.cooccur.network.csv ../sampledata/cooccurNetwork/uc2.cooccur.network.csv ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
+Rscript ./github_src/globalNetworkAnaysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ./sampledata/ko/IBD2_KOdata.csv
 ```
 #### _Community-level analysis_ 
 Run the 'communityLevelAnalysis.R'
 ```
-Rscript ./github_src/communityLevelAnalysis.R ./github_src/ ../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ../sampledata/cooccurNetwork/cd1.cooccur.network.csv ../sampledata/cooccurNetwork/cd2.cooccur.network.csv ../sampledata/cooccurNetwork/uc1.cooccur.network.csv ../sampledata/cooccurNetwork/uc2.cooccur.network.csv ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
+Rscript ./github_src/communityLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
 #### _Key element-level analysis_ 
 Run the 'keyElementLevelAnalysis.R'
 ```
-Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ../sampledata/cooccurNetwork/cd1.cooccur.network.csv ../sampledata/cooccurNetwork/cd2.cooccur.network.csv ../sampledata/cooccurNetwork/uc1.cooccur.network.csv ../sampledata/cooccurNetwork/uc2.cooccur.network.csv ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
+Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
 ### Comparative analysis
 ```
