@@ -17,6 +17,10 @@ Software R
 ### Main workflow
 ![Overview](https://github.com/skimicrobe/GutNetMining/blob/main/Overviewpipeline.png)
 
+### How to construct the species co-occurrence network 
+We mainly utilise the R package called 'cooccur' to creat the co-occurrence network. More details to this package: _['cooccur'](https://www.jstatsoft.org/article/view/v069c02)_. 
+_Note: We will construct the co-occurrence network using 'cooccur' function. Input data must be presence/absence matrix. Abundance values greater than zero are considered "present"._
+
 ### Network analysis 
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
 ```
