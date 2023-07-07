@@ -21,6 +21,14 @@ Software R
 We mainly utilize the R package called 'cooccur' to create the co-occurrence network. More details to this package: _['cooccur'](https://www.jstatsoft.org/article/view/v069c02)_. 
 _Note: We will construct the co-occurrence network using 'cooccur' function. Input data must be presence/absence matrix. Abundance values greater than zero are considered "present"._
 
+Run the 'cooccurrenceNetwork.R' script in github_src directory with the following parameters:
+```
+./cooccurrenceNetwork.R MGX_TAXONPROFILE, METADATA
+```
+A sample run using the example data. 
+```
+Rscript ./github_src/cooccurrenceNetwork.R ./github_src/ 
+```
 ### Network analysis 
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
 ```
