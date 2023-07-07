@@ -90,12 +90,6 @@ uc2EnrichNW<- data.frame(enrichKO(unique(unlist(uc2KO$ko)),
                                   universe = ko2$Koid))
 
 ## Find common enriched pathways across two IBD datasets 
-sort(intersect(setdiff(cd.ibd1.map.list$Description, c.ibd1.map.list$Description),
-               setdiff(cd.ibd2.map.list$Description,c.ibd2.map.list$Description)))
-sort(intersect(setdiff(uc.ibd1.map.list$Description, c.ibd1.map.list$Description),
-               setdiff(uc.ibd2.map.list$Description,c.ibd2.map.list$Description)))
-
-
 resCDnetwork<- sort(intersect(setdiff(cd1EnrichNW$Description, 
                                   ctrl1EnrichNW$Description),
                           setdiff(cd2EnrichNW$Description, 
