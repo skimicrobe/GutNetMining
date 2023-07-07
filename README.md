@@ -29,7 +29,7 @@ A sample run using the example data.
 ```
 Rscript ./github_src/cooccurrenceNetwork.R ./github_src/ ./sampledata/rawdata/IBD_mgxdata.csv ./sampledata/rawdata/IBD_metadata.csv 
 ```
-_Note: This sample dataset is publicly available ([PRJNA400072](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP129027&o=acc_s%3Aa)). Our provided data is pre-processed and filtered by our sample filtering process. 
+_Note: This sample dataset is publicly available ([PRJNA400072](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP129027&o=acc_s%3Aa)). Our provided data is pre-processed and filtered by our sample filtering process._
 
 ### Network analysis 
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
