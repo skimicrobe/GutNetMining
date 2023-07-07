@@ -1,5 +1,7 @@
+#!/usr/bin/r
+
 ################################################################################
-# cooccurrenceNetwork.R                                                        #
+# Script: cooccurrenceNetwork.R                                                #
 # Name: Suyeon Kim                                                             #
 # Date: July-07-2023                                                           #
 # Last updated: July-07-2023                                                   #
