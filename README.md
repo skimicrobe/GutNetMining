@@ -19,6 +19,9 @@ Our pipeline contains 4 major steps: (A) construct a species co-occurrence netwo
 ### Main workflow
 ![Overview](https://github.com/skimicrobe/GutNetMining/blob/main/Overviewpipeline.png)
 
+## Getting Started 
+This is an example of how our pipeline can be used. 
+
 ### How to construct the species co-occurrence network 
 We mainly utilize the R package called 'cooccur' to create the co-occurrence network. More details to this package: _['cooccur'](https://www.jstatsoft.org/article/view/v069c02)_. 
 _Note: We will construct the co-occurrence network using 'cooccur' function. Input data must be presence/absence matrix. Abundance values greater than zero are considered "present"._
@@ -66,7 +69,7 @@ Run the 'globalNetworkAnalysis.R'
 Rscript ./github_src/globalNetworkAnaysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ./sampledata/ko/IBD2_KOdata.csv
 ```
 #### _Community-level analysis_ 
-Run the 'communityLevelAnalysis.R' This script will conduct the community-level analysis along with the output of Table 4,5 and Figure 4 with supplement file2: Figure 3,4, and 5.
+Run the 'communityLevelAnalysis.R'. This script will conduct the community-level analysis along with generating the output of Table 4,5 and Figure 4 with supplement file2: Figure 3,4, and 5.
 ```
 Rscript ./github_src/communityLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
