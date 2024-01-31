@@ -36,7 +36,7 @@ Rscript ./github_src/cooccurrenceNetwork.R ./github_src/ ./sampledata/rawdata/IB
 ```
 _Note: This sample dataset is publicly available ([PRJNA400072](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP129027&o=acc_s%3Aa)). Our provided data is pre-processed and filtered by our sample filtering process._
 
-### Network analysis 
+### Network analysis & Enrichment analysis
 Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following parameters: 
 ```
 ./NETWORK_ANALYSIS.R SRC_DIR CONTROL_NETW_1 CONTROL_NETW_2 CD_NETW_1 CD_NETW_2 UC_NETW_1 UC_NETW_2 KO_1 KO_2
