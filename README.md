@@ -61,12 +61,12 @@ Run the 'NETWORK_ANALYSIS.R' script in github_src directory with the following p
 A sample run using the example data. The level of significance level for the species co-occurrence network can be changed by the users.
 
 #### _Global Network analysis_
-
+Run the 'globalNetworkAnalysis.R'
 ```
 Rscript ./github_src/globalNetworkAnaysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ./sampledata/ko/IBD2_KOdata.csv
 ```
 #### _Community-level analysis_ 
-Run the 'communityLevelAnalysis.R'
+Run the 'communityLevelAnalysis.R' This script will conduct the community-level analysis along with the output of Table 4,5 and Figure 4 with supplement file2: Figure 3,4, and 5.
 ```
 Rscript ./github_src/communityLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
