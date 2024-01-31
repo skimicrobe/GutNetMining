@@ -14,6 +14,8 @@ Software R
 
 ----------------------------------------------------------------------
 ## Workflows
+Our pipeline contains 4 major steps: (A) construct a species co-occurrence network from microbiome profile data; (B) Analyze the co-occurrence network at three granularity levels; (C) Perform pathway enrichment analysis; (D) Compare enriched pathways betweeen two IBD datasets in each sample from healthy/diseased status. 
+
 ### Main workflow
 ![Overview](https://github.com/skimicrobe/GutNetMining/blob/main/Overviewpipeline.png)
 
