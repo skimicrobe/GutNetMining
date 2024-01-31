@@ -13,11 +13,6 @@ library(pathview)
 args = commandArgs(trailingOnly=TRUE)
 print(args)
 
-args <- c("../github_src/","../sampledata/cooccurNetwork/ctrl1.cooccur.network.csv",
-          "../sampledata/cooccurNetwork/ctrl2.cooccur.network.csv","../sampledata/cooccurNetwork/cd1.cooccur.network.csv",
-          "../sampledata/cooccurNetwork/cd2.cooccur.network.csv","../sampledata/cooccurNetwork/uc1.cooccur.network.csv",
-          "../sampledata/cooccurNetwork/uc2.cooccur.network.csv","../sampledata/ko/IBD1_KOdata.csv","../sampledata/ko/IBD2_KOdata.csv","cla1.csv","cla2.csv")
-
 sourceDir<- args[1]
 InFile1<- args[2]
 InFile2<- args[3]
@@ -27,8 +22,6 @@ InFile5<- args[6]
 InFile6<- args[7]
 InFile7<- args[8]
 InFile8<- args[9]
-OutFile1<- args[10]
-OutFile2<- args[11]
 
 ################################################################################
 # List of functions                                                            #
@@ -219,18 +212,6 @@ uc2minusctrl2 <- setdiff(unique(unlist(lapply(uc2Enrich,function(x)
 cat(paste0("Enriched Pathways in UC groups: ", 
            intersect(uc1minusctrl1, uc2minusctrl2), "\n"))
 
-## save the .csv output of the results of CD group 
-#resPathwayCD<- intersect(cd1minusctrl1, cd2minusctrl2)
-#print("Saving enriched pathway output for the CD group from community-level analysis!")
-#write.csv(resPathwayCD, file=OutFile1, row.names=FALSE, col.names=F)
-
-## save the .csv output of the results of UC group 
-#resPathwayUC<- paste0("Enriched Pathways in UC group: ", 
-#                      intersect(uc1minusctrl1, uc2minusctrl2))
-#print("Saving enriched pathway output for the UC group from community-level analysis!")
-#write.csv(resPathwayUC, file=OutFile2, row.names=FALSE, col.names=F)
-
-
 ################################################################################
 # For table4 and table5                                                        #                                   
 ################################################################################
@@ -399,10 +380,10 @@ print(pathwayOfInterest)
 cdTable<- table5[grep("CD1|CD2", table5$group), c("group","pathway","KOlist")]
 ucTable<- table5[grep("UC1|UC2", table5$group), c("group","pathway","KOlist")]
 
-# For pathview function, 'pathway.id' parameter requires to have 'pathway IDs'  from
-# KEGG Pathway database. Once you obtained 'pathwayOfInterest' varaible, go visit 
-# (https://www.genome.jp/kegg/pathway.html). Then, search the name of pathway 
-# in 'Entery keywords' bar. 
+# For pathview function, 'pathway.id' parameter requires to have 'pathway IDs'  
+# from KEGG Pathway database. Once you obtained 'pathwayOfInterest' varaible, 
+# go visit (https://www.genome.jp/kegg/pathway.html). Then, search the name of 
+# pathway in 'Entery keywords' bar. 
 
 ## 'Sulfur relay system' | KEGG pathway.ids = map04122 | CD and UC group 
 cdSulfurRelaySys<- unlist(cdTable[cdTable$pathway==pathwayOfInterest[3],"KOlist"])
