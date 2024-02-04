@@ -19,8 +19,15 @@ Our pipeline contains 4 major steps: (A) construct a species co-occurrence netwo
 ### Main workflow
 ![Overview](https://github.com/skimicrobe/GutNetMining/blob/main/Overviewpipeline.png)
 
-## Getting Started 
-This is an example of how our pipeline can be used. 
+## Input data  
+We provide the datasets that used in our mansucript! Please download the folder 'sampledata.zip' in the location you would like to use. 
+```
+unzip sampledata.zip 
+```
+**Three output folders will be created when you unzip it:**
+ 1. `$OUTPUT_DIR/sampledata/cooccurNetwork/`
+ 2. `$OUTPUT_DIR/sampledata/ko/`
+ 3. `$OUTPUT_DIR/sampledata/rawdata/`
 
 ### How to construct the species co-occurrence network 
 We mainly utilize the R package called 'cooccur' to create the co-occurrence network. More details to this package: _['cooccur'](https://www.jstatsoft.org/article/view/v069c02)_. 
@@ -78,7 +85,7 @@ Run the 'keyElementLevelAnalysis.R'
 ```
 Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
-### Showcase  
-```
+### Try out a demo run 
+An executable R script for the Mac OS X is available as "run_all.R". the prgoram can be run by the following command: 
 Rscript ./github_src/table4AND5.R ./github_src/ ../sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
