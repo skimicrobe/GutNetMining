@@ -25,10 +25,19 @@ We provide the datasets that used in our mansucript! Please download the folder 
 unzip sampledata.zip 
 ```
 **Three output folders will be created when you unzip it:**
- 1. `$OUTPUT_DIR/sampledata/cooccurNetwork/`
- 2. `$OUTPUT_DIR/sampledata/ko/`
- 3. `$OUTPUT_DIR/sampledata/rawdata/`
+ 1. `./sampledata/cooccurNetwork/`
+ 2. `./sampledata/ko/`
+ 3. `./sampledata/rawdata/`
 
+--------------------------------------------------------------------
+### Try out a demo run (Run all the steps with one command):
+
+An executable R script is available as "run_all.R". the prgoram can be run by the following command: 
+```
+Rscript ./github_src/run_all.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ./sampledata/ko/IBD2_KOdata.csv
+```
+--------------------------------------------------------------------
+## Running individual steps:
 ### How to construct the species co-occurrence network 
 We mainly utilize the R package called 'cooccur' to create the co-occurrence network. More details to this package: _['cooccur'](https://www.jstatsoft.org/article/view/v069c02)_. 
 _Note: We will construct the co-occurrence network using 'cooccur' function. Input data must be presence/absence matrix. Abundance values greater than zero are considered "present"._
@@ -85,8 +94,4 @@ Run the 'keyElementLevelAnalysis.R'
 ```
 Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
-### Try out a demo run 
-An executable R script is available as "run_all.R". the prgoram can be run by the following command: 
-```
-Rscript ./github_src/run_all.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ./sampledata/ko/IBD2_KOdata.csv
-```
+
