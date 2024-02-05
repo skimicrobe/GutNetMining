@@ -10,7 +10,7 @@ Contact the author at suyeonkim [at] unomaha.edu. This version has been tested f
 3. Easy to implement
 ----------------------------------------------------------------------
 ## Requirements
-Software R (Download from ![here](https://www.r-project.org/) )
+Software R (Download from [here](https://www.r-project.org/) )
 
 ----------------------------------------------------------------------
 ## Workflows
