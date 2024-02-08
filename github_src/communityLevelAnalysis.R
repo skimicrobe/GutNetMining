@@ -233,21 +233,21 @@ listOfcooccurSpecies<- function(cooccurNetw){
 findEnrichmentTable <- function(pathwayToLocate, enrichList, KoLongDf, clusterList, group) {
   res <- data.frame()
   for(cluster in 1:length(enrichList)) {
-    print(cluster)
+    #print(cluster)
     ibdMapList = enrichList[[cluster]]
     
     if(nrow(ibdMapList)>0){
       clusterMembers = clusterList[[cluster]]
-      print(clusterMembers)
+      #print(clusterMembers)
       
       if(length(which(ibdMapList$Description == pathwayToLocate)) > 0) {
-        print(ibdMapList$Description)
+        #print(ibdMapList$Description)
         geneList<- unlist(strsplit(ibdMapList[which(ibdMapList$Description == pathwayToLocate),"geneID"],"\\/"))
-        print(geneList)
+        #print(geneList)
         matchedGene<- KoLongDf[which(KoLongDf$Koid %in% geneList & 
                                        KoLongDf$GROUP == group & 
                                        KoLongDf$cooccur == TRUE),]
-        print(dim(matchedGene))
+        #print(dim(matchedGene))
         nameOfsp<- intersect(unique(matchedGene$Species), as.character(clusterMembers))
         
         row <- cbind(group, pathwayToLocate, cluster, "specieslist" = list(nameOfsp), "count" = length(nameOfsp))
@@ -351,58 +351,63 @@ pathwayOfInterest <- unique(finalTable4$pathway)
 groupNames <- unique(finalTable4$groupName)
 for(pathway in pathwayOfInterest){
   #pathway, soi, enrichTable, KoLongDf, group
-  print(pathway)
+  #print(pathway)
   for(group in groupNames) {
-    print(group)
+    #print(group)
     if(!is.null(allClusterRes[[pathway]][[group]])){
       soi <- as.character(unlist(allClusterRes[[pathway]][[group]]$specieslist))
       cluster <- as.numeric(unlist(allClusterRes[[pathway]][[group]]$cluster))
       enrichTable <- allEnrich[[group]][[cluster]]
       KoLongDf <- allGroups[allGroups$groupName==group,]
       res <- findKOInfo(pathway, soi, enrichTable, KoLongDf, group)
-      table5 <- rbind(table5,cbind(group,pathway,res))
+      KOlist <- paste(unlist(res$KOlist), collapse = ";")
+      table5 <- rbind(table5,cbind(group,pathway,res$species, KOlist, res$count))
     }
   }
- 
 }
+
+#flattenedDf <- cbind(table5[,-which(names(table5) == "KOlist")],
+#                     do.call(rbind, table5$KOlist))
 print("Saving the Table 5 output...") 
 write.csv(table5, file="outputTable5.csv", row.names=F)
 
 ################################################################################
 # For figure 4                                                                 #                                   
 ################################################################################
-print("Creating the Figure 4...")
-
 # Prepare the list of pathways of interest
-pathwayOfInterest<- unique(table5$pathway)
+pathwayOfInterest<- unique(pathViewInpt $pathway)
 print(pathwayOfInterest)
 
-cdTable<- table5[grep("CD1|CD2", table5$group), c("group","pathway","KOlist")]
-ucTable<- table5[grep("UC1|UC2", table5$group), c("group","pathway","KOlist")]
+cdTable <- table5[grep("CD1|CD2", table5$group), c("group","pathway","KOlist")]
+cdTable$KOlist <- strsplit(cdTable$KOlist,split = ";")
+ucTable <- table5[grep("UC1|UC2", table5$group), c("group","pathway","KOlist")]
+ucTable$KOlist <- strsplit(ucTable$KOlist,split = ";")
 
 # For pathview function, 'pathway.id' parameter requires to have 'pathway IDs'  
 # from KEGG Pathway database. Once you obtained 'pathwayOfInterest' varaible, 
 # go visit (https://www.genome.jp/kegg/pathway.html). Then, search the name of 
 # pathway in 'Entery keywords' bar. 
 
-## 'Sulfur relay system' | KEGG pathway.ids = map04122 | CD and UC group 
+## 'Sulfur relay system' | KEGG pathway.ids = map04122 | CD group 
+print("Saving the Figure 4")
 cdSulfurRelaySys<- unlist(cdTable[cdTable$pathway==pathwayOfInterest[3],"KOlist"])
 pathview(cdSulfurRelaySys, pathway.id="04122", species="ko", 
          out.suffix="cd_SulfurRelaySys")
 
-ucSulfurRelaySys<- unlist(ucTable[ucTable$pathway==pathwayOfInterest[3],"KOlist"])
-pathview(ucSulfurRelaySys, pathway.id="04122", species="ko", 
-         out.suffix="uc_SulfurRelaySys")
-
 ################################################################################
-# For Supplement figures                                                       #                                   
+# For Supplement figures (Figure 3,4,5)                                        #                                   
 ################################################################################
-## 'ABC transporter' | KEGG pathway.ids = map02010 | CD group 
+## Supplment figure 3: 'ABC transporter' | KEGG pathway.ids = map02010 | CD group 
 cdABCTransport<- unlist(cdTable[cdTable$pathway==pathwayOfInterest[1],"KOlist"])
 pathview(cdABCTransport, pathway.id="02010", species="ko", 
          out.suffix="cd_ABCTransport")
 
-## 'Two-component system' | KEGG pathway.ids = map02020 | CD group 
+## Supplment figure 4:'Two-component system' | KEGG pathway.ids = map02020 | CD group 
 cdTwoCompSys<- unlist(cdTable[cdTable$pathway==pathwayOfInterest[2],"KOlist"])
 pathview(cdTwoCompSys, pathway.id="02020", species="ko", 
-         out.suffix="cd_TwoCompSys")
+         out.suffix="cd_TwoCompSys", kegg.native=T)#, pdf.size = c(7, 7))
+
+## Supplment figure 5:'Sulfur relay system' | KEGG pathway.ids = map04122 | UC group 
+ucSulfurRelaySys<- unlist(ucTable[ucTable$pathway==pathwayOfInterest[3],"KOlist"])
+pathview(ucSulfurRelaySys, pathway.id="04122", species="ko", 
+           out.suffix="uc_SulfurRelaySys")
