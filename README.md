@@ -3,7 +3,6 @@
 We present a computational pipeline to identify co-occurring microbial communities and their functional roles from metagenomic data. This approach reveals signature pathways linked to inflammatory bowel disease (IBD) and highlights community-driven pathway enrichment. This adaptable method is broadly applicable to microbiome studies across various domains.
 
 
-### HOW TO USE 
 This repository contains all the code and processed datsets necessary to reproduce the results
 Contact the author at suyeonkim [at] unomaha.edu. This version has been tested for OSX. 
 
