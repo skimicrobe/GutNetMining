@@ -6,6 +6,9 @@ We present a computational pipeline to identify co-occurring microbial communiti
 This repository contains all the code and processed datsets necessary to reproduce the results
 Contact the author at suyeonkim [at] unomaha.edu. This version has been tested for OSX. 
 
+If you use our pipeline in your work, please cite the paper:
+(A novel computational approach for the mining of signature pathway using species co-occurrence networks in gut microbiomes [here](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-024-03633-6))
+
 ----------------------------------------------------------------------
 ## Features 
 1. Pathway-based profile based on species co-occurring community 
@@ -98,19 +101,4 @@ Run the 'keyElementLevelAnalysis.R'
 Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
 
-## How to cite 
-[APA Style]
-Kim, S., Thapa, I., & Ali, H. (2024). A novel computational approach for the mining of signature pathways using species co-occurrence networks in gut microbiomes. BMC microbiology, 24(Suppl 1), 490.
-
-[BibTeX]
-@article{kim2024novel,
-  title={A novel computational approach for the mining of signature pathways using species co-occurrence networks in gut microbiomes},
-  author={Kim, Suyeon and Thapa, Ishwor and Ali, Hesham},
-  journal={BMC microbiology},
-  volume={24},
-  number={Suppl 1},
-  pages={490},
-  year={2024},
-  publisher={Springer}
-}
 
