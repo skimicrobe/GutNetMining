@@ -1,5 +1,10 @@
 # A novel computational approach for the mining of signature pathways using species co-occurrence networks in gut microbiomes
 
+Our project introduces an innovative computational pipeline designed to identify co-occurring microbial communities and uncover their functional roles from metagenomic data. By leveraging this approach, we have uncovered signature pathways associated with inflammatory bowel disease (IBD), shedding light on the community-driven enrichment of critical pathways. This adaptable method is broadly applicable to microbiome studies across various domains, opening new avenues for diagnostics and deepening our understanding of complex biological systems in healthcare and biomedical research. 
+
+
+
+### HOW TO USE 
 This repository contains all the code and processed datsets necessary to reproduce the results
 Contact the author at suyeonkim [at] unomaha.edu. This version has been tested for OSX. 
 
