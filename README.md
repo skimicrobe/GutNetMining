@@ -98,7 +98,7 @@ Run the 'keyElementLevelAnalysis.R'
 Rscript ./github_src/keyElementLevelAnalysis.R ./github_src/ ./sampledata/cooccurNetwork/ctrl1.cooccur.network.csv ./sampledata/cooccurNetwork/ctrl2.cooccur.network.csv ./sampledata/cooccurNetwork/cd1.cooccur.network.csv ./sampledata/cooccurNetwork/cd2.cooccur.network.csv ./sampledata/cooccurNetwork/uc1.cooccur.network.csv ./sampledata/cooccurNetwork/uc2.cooccur.network.csv ./sampledata/ko/IBD1_KOdata.csv ../sampledata/ko/IBD2_KOdata.csv
 ```
 
-### HOW TO CITE
+## HOW TO CITE
 [APA Style]
 Kim, S., Thapa, I., & Ali, H. (2024). A novel computational approach for the mining of signature pathways using species co-occurrence networks in gut microbiomes. BMC microbiology, 24(Suppl 1), 490.
 
