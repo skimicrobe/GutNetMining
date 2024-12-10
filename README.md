@@ -6,8 +6,8 @@ We present a computational pipeline to identify co-occurring microbial communiti
 This repository contains all the code and processed datsets necessary to reproduce the results
 Contact the author at suyeonkim [at] unomaha.edu. This version has been tested for OSX. 
 
-If you use our pipeline in your work, please cite the paper:
-(A novel computational approach for the mining of signature pathway using species co-occurrence networks in gut microbiomes [here](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-024-03633-6))
+**If you use our pipeline in your work, please cite the paper:**
+(Suyeon Kim, Ishwor Thapa & Hesham Ali [A novel computational approach for the mining of signature pathway using species co-occurrence networks in gut microbiomes](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-024-03633-6))
 
 ----------------------------------------------------------------------
 ## Features 
