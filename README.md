@@ -1,4 +1,4 @@
-# GutNetMining User Manual 
+# A novel computational approach for the mining of signature pathways using species co-occurrence networks in gut microbiomes
 
 This repository contains all the code and processed datsets necessary to reproduce the results
 Contact the author at suyeonkim [at] unomaha.edu. This version has been tested for OSX. 
